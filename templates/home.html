@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Prediction App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="text-center my-5">
+            <h1 class="text-primary">Health Prediction App</h1>
+            <p class="text-secondary">Choose a prediction model below</p>
+        </header>
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <a href="/predict/heart" class="btn btn-info btn-block">Heart Disease Prediction</a>
+            </div>
+            <div class="col-md-4">
+                <a href="/predict/diabetes" class="btn btn-danger btn-block">Diabetes Prediction</a>
+            </div>
+            <div class="col-md-4">
+                <a href="/predict/parkinsons" class="btn btn-success btn-block">Parkinson's Disease Prediction</a>
+            </div>
+        </div>
+        <div class="mt-4">
+            <a href="/about" class="btn btn-warning btn-block">About</a>
+        </div>
+    </div>
+</body>
+</html>

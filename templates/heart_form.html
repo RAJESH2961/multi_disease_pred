@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}Heart Disease Prediction{% endblock %}
+
+{% block content %}
+    <h2>Heart Disease Prediction</h2>
+    <form method="POST" action="/predict/heart">
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" name="age" placeholder="Enter age" required>
+        </div>
+        <div class="form-group">
+            <label for="sex">Sex (1: Male, 0: Female)</label>
+            <input type="number" class="form-control" id="sex" name="sex" placeholder="Enter sex (1 for male, 0 for female)" required>
+        </div>
+        <div class="form-group">
+            <label for="cp">Chest Pain Type (0: Typical Angina, 1: Atypical Angina, 2: Non-Anginal Pain, 3: Asymptomatic)</label>
+            <input type="number" class="form-control" id="cp" name="cp" placeholder="Enter chest pain type" required>
+        </div>
+        <div class="form-group">
+            <label for="trestbps">Resting Blood Pressure</label>
+            <input type="number" class="form-control" id="trestbps" name="trestbps" placeholder="Enter resting blood pressure" required>
+        </div>
+        <div class="form-group">
+            <label for="chol">Cholesterol Level</label>
+            <input type="number" class="form-control" id="chol" name="chol" placeholder="Enter cholesterol level" required>
+        </div>
+        <div class="form-group">
+            <label for="fbs">Fasting Blood Sugar (1: > 120 mg/dl, 0: <= 120 mg/dl)</label>
+            <input type="number" class="form-control" id="fbs" name="fbs" placeholder="Enter fasting blood sugar" required>
+        </div>
+        <div class="form-group">
+            <label for="restecg">Resting Electrocardiographic Results (0: Normal, 1: Having ST-T wave abnormality, 2: Showing probable or definite left ventricular hypertrophy)</label>
+            <input type="number" class="form-control" id="restecg" name="restecg" placeholder="Enter resting ECG result" required>
+        </div>
+        <div class="form-group">
+            <label for="thalach">Maximum Heart Rate Achieved</label>
+            <input type="number" class="form-control" id="thalach" name="thalach" placeholder="Enter maximum heart rate" required>
+        </div>
+        <div class="form-group">
+            <label for="exang">Exercise Induced Angina (1: Yes, 0: No)</label>
+            <input type="number" class="form-control" id="exang" name="exang" placeholder="Enter exercise induced angina" required>
+        </div>
+        <div class="form-group">
+            <label for="oldpeak">Depression Induced by Exercise Relative to Rest</label>
+            <input type="number" class="form-control" id="oldpeak" name="oldpeak" step="0.1" placeholder="Enter depression induced by exercise" required>
+        </div>
+        <div class="form-group">
+            <label for="slope">Slope of Peak Exercise ST Segment (0: Upsloping, 1: Flat, 2: Downsloping)</label>
+            <input type="number" class="form-control" id="slope" name="slope" placeholder="Enter slope" required>
+        </div>
+        <div class="form-group">
+            <label for="ca">Number of Major Vessels Colored by Fluoroscopy</label>
+            <input type="number" class="form-control" id="ca" name="ca" placeholder="Enter number of vessels" required>
+        </div>
+        <div class="form-group">
+            <label for="thal">Thalassemia (1: Normal, 2: Fixed Defect, 3: Reversible Defect)</label>
+            <input type="number" class="form-control" id="thal" name="thal" placeholder="Enter thalassemia status" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Predict</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .result-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .result-container h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .result-container .alert {
+            font-size: 24px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .positive {
+            background-color: #28a745;
+            color: white;
+        }
+        .negative {
+            background-color: #dc3545;
+            color: white;
+        }
+        .tips {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="result-container">
+            <h2>Prediction Result for {{ model_type | capitalize }} Model</h2>
+            
+            {% if result == 'Heart Disease' %}
+                <div class="alert positive">
+                    <strong>Positive:</strong> Heart Disease Detected
+                </div>
+                <div class="tips">
+                    <p><strong>Health Tip:</strong> It's important to maintain a healthy lifestyle with regular exercise, a balanced diet, and stress management. Consider consulting a doctor for a thorough evaluation and treatment plan.</p>
+                </div>
+            {% elif result == 'No Heart Disease' %}
+                <div class="alert negative">
+                    <strong>Negative:</strong> No Heart Disease Detected
+                </div>
+                <div class="tips">
+                    <p><strong>Health Tip:</strong> Keep up the good work by maintaining a healthy lifestyle with a nutritious diet, regular exercise, and routine health check-ups.</p>
+                </div>
+            {% elif result == 'Diabetic' %}
+                <div class="alert positive">
+                    <strong>Positive:</strong> Diabetic
+                </div>
+                <div class="tips">
+                    <p><strong>Health Tip:</strong> Regular monitoring of blood sugar levels, a balanced diet, and regular physical activity can help you manage diabetes effectively. Consult your healthcare provider for a personalized plan.</p>
+                </div>
+            {% elif result == 'Non-Diabetic' %}
+                <div class="alert negative">
+                    <strong>Negative:</strong> Non-Diabetic
+                </div>
+                <div class="tips">
+                    <p><strong>Health Tip:</strong> Keep up your healthy habits, stay active, and maintain a balanced diet to reduce your risk of developing diabetes in the future.</p>
+                </div>
+            {% elif result == "Parkinson's Disease Detected" %}
+                <div class="alert positive">
+                    <strong>Positive:</strong> Parkinson's Disease Detected
+                </div>
+                <div class="tips">
+                    <p><strong>Health Tip:</strong> Early detection and treatment are key to managing Parkinson's. Work with a healthcare professional for a personalized treatment plan to manage symptoms effectively.</p>
+                </div>
+            {% elif result == "No Parkinson's Disease Detected" %}
+                <div class="alert negative">
+                    <strong>Negative:</strong> No Parkinson's Disease Detected
+                </div>
+                <div class="tips">
+                    <p><strong>Health Tip:</strong> Stay proactive about your health. Regular exercise, good nutrition, and mental exercises can help keep your body and mind healthy.</p>
+                </div>
+            {% endif %}
+            
+            <br>
+            <a href="/" class="btn btn-primary">Go Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

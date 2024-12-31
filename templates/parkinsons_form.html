@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+
+{% block title %}Parkinson's Disease Prediction Form{% endblock %}
+
+{% block content %}
+    <h2>Parkinson's Disease Prediction Form</h2>
+    <form method="POST">
+        <!-- Gender -->
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender" name="gender" required>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+        </div>
+
+        <!-- Ethnicity -->
+        <div class="form-group">
+            <label for="ethnicity">Ethnicity</label>
+            <select class="form-control" id="ethnicity" name="ethnicity" required>
+                <option value="0">Caucasian</option>
+                <option value="1">African American</option>
+                <option value="2">Hispanic</option>
+                <option value="3">Asian</option>
+                <option value="4">Other</option>
+            </select>
+        </div>
+
+        <!-- BMI -->
+        <div class="form-group">
+            <label for="bmi">BMI</label>
+            <input type="number" class="form-control" id="bmi" name="bmi" step="0.01" required>
+        </div>
+
+        <!-- Smoking -->
+        <div class="form-group">
+            <label for="smoking">Smoking</label>
+            <select class="form-control" id="smoking" name="smoking" required>
+                <option value="0">Non-smoker</option>
+                <option value="1">Smoker</option>
+            </select>
+        </div>
+
+        <!-- Alcohol Consumption -->
+        <div class="form-group">
+            <label for="alcohol_consumption">Alcohol Consumption</label>
+            <input type="number" class="form-control" id="alcohol_consumption" name="alcohol_consumption" step="0.01" required>
+        </div>
+
+        <!-- Physical Activity -->
+        <div class="form-group">
+            <label for="physical_activity">Physical Activity</label>
+            <input type="number" class="form-control" id="physical_activity" name="physical_activity" step="0.01" required>
+        </div>
+
+        <!-- Diet Quality -->
+        <div class="form-group">
+            <label for="diet_quality">Diet Quality</label>
+            <input type="number" class="form-control" id="diet_quality" name="diet_quality" step="0.01" required>
+        </div>
+
+        <!-- Sleep Quality -->
+        <div class="form-group">
+            <label for="sleep_quality">Sleep Quality</label>
+            <input type="number" class="form-control" id="sleep_quality" name="sleep_quality" step="0.01" required>
+        </div>
+
+        <!-- Family History of Parkinson's -->
+        <div class="form-group">
+            <label for="family_history">Family History of Parkinson's</label>
+            <select class="form-control" id="family_history" name="family_history" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Traumatic Brain Injury -->
+        <div class="form-group">
+            <label for="traumatic_brain_injury">Traumatic Brain Injury</label>
+            <select class="form-control" id="traumatic_brain_injury" name="traumatic_brain_injury" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Hypertension -->
+        <div class="form-group">
+            <label for="hypertension">Hypertension</label>
+            <select class="form-control" id="hypertension" name="hypertension" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Diabetes -->
+        <div class="form-group">
+            <label for="diabetes">Diabetes</label>
+            <select class="form-control" id="diabetes" name="diabetes" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Depression -->
+        <div class="form-group">
+            <label for="depression">Depression</label>
+            <select class="form-control" id="depression" name="depression" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Stroke -->
+        <div class="form-group">
+            <label for="stroke">Stroke</label>
+            <select class="form-control" id="stroke" name="stroke" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Systolic BP -->
+        <div class="form-group">
+            <label for="systolic_bp">Systolic BP</label>
+            <input type="number" class="form-control" id="systolic_bp" name="systolic_bp" required>
+        </div>
+
+        <!-- Diastolic BP -->
+        <div class="form-group">
+            <label for="diastolic_bp">Diastolic BP</label>
+            <input type="number" class="form-control" id="diastolic_bp" name="diastolic_bp" required>
+        </div>
+
+        <!-- Cholesterol Total -->
+        <div class="form-group">
+            <label for="cholesterol_total">Cholesterol Total</label>
+            <input type="number" class="form-control" id="cholesterol_total" name="cholesterol_total" required>
+        </div>
+
+        <!-- Cholesterol LDL -->
+        <div class="form-group">
+            <label for="cholesterol_ldl">Cholesterol LDL</label>
+            <input type="number" class="form-control" id="cholesterol_ldl" name="cholesterol_ldl" required>
+        </div>
+
+        <!-- Cholesterol HDL -->
+        <div class="form-group">
+            <label for="cholesterol_hdl">Cholesterol HDL</label>
+            <input type="number" class="form-control" id="cholesterol_hdl" name="cholesterol_hdl" required>
+        </div>
+
+        <!-- Cholesterol Triglycerides -->
+        <div class="form-group">
+            <label for="cholesterol_triglycerides">Cholesterol Triglycerides</label>
+            <input type="number" class="form-control" id="cholesterol_triglycerides" name="cholesterol_triglycerides" required>
+        </div>
+
+        <!-- UPDRS -->
+        <div class="form-group">
+            <label for="updrs">UPDRS</label>
+            <input type="number" class="form-control" id="updrs" name="updrs" required>
+        </div>
+
+        <!-- MoCA -->
+        <div class="form-group">
+            <label for="moca">MoCA</label>
+            <input type="number" class="form-control" id="moca" name="moca" required>
+        </div>
+
+        <!-- Functional Assessment -->
+        <div class="form-group">
+            <label for="functional_assessment">Functional Assessment</label>
+            <input type="number" class="form-control" id="functional_assessment" name="functional_assessment" required>
+        </div>
+
+        <!-- Tremor -->
+        <div class="form-group">
+            <label for="tremor">Tremor</label>
+            <select class="form-control" id="tremor" name="tremor" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Rigidity -->
+        <div class="form-group">
+            <label for="rigidity">Rigidity</label>
+            <select class="form-control" id="rigidity" name="rigidity" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Bradykinesia -->
+        <div class="form-group">
+            <label for="bradykinesia">Bradykinesia</label>
+            <select class="form-control" id="bradykinesia" name="bradykinesia" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Postural Instability -->
+        <div class="form-group">
+            <label for="postural_instability">Postural Instability</label>
+            <select class="form-control" id="postural_instability" name="postural_instability" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Speech Problems -->
+        <div class="form-group">
+            <label for="speech_problems">Speech Problems</label>
+            <select class="form-control" id="speech_problems" name="speech_problems" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Sleep Disorders -->
+        <div class="form-group">
+            <label for="sleep_disorders">Sleep Disorders</label>
+            <select class="form-control" id="sleep_disorders" name="sleep_disorders" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Constipation -->
+        <div class="form-group">
+            <label for="constipation">Constipation</label>
+            <select class="form-control" id="constipation" name="constipation" required>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}
