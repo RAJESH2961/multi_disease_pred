@@ -129,5 +129,5 @@ def predict_parkinsons():
 def about():
     return render_template('about.html')  # About page
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)

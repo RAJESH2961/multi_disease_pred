@@ -30,6 +30,11 @@
             font-size: 1.1rem;
         }
 
+        ul {
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
         .footer {
             text-align: center;
             margin-top: 30px;
@@ -43,10 +48,28 @@
             color: white;
             border-radius: 5px;
             border: none;
+            margin-top: 20px;
         }
 
         .btn:hover {
             background-color: #0056b3;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
+        .links a {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.1rem;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+            color: #0056b3;
         }
     </style>
 </head>
@@ -61,11 +84,17 @@
             <li>Bootstrap (Frontend)</li>
             <li>Machine Learning Algorithms (for prediction)</li>
         </ul>
+
+        <div class="links">
+            <a href="https://github.com/RAJESH2961/Multi-Disease-Prediction-System" target="_blank">View Source Code on GitHub</a>
+            <a href="https://example.com/dataset-download-link" target="_blank">Download Dataset</a>
+        </div>
+
         <button class="btn" onclick="window.location.href='/';">Go Back to Home</button>
     </div>
 
     <footer class="footer">
-        <p>Developed by Rajesh - Heart Disease Prediction System</p>
+        <p>Developed by <a href="mailto:grajesh2906@gmail.com">Rajesh</a> - Multi Disease Prediction System</p>
     </footer>
 </body>
 </html>
