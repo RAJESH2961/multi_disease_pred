@@ -1,6 +1,9 @@
 # Multi-Disease Prediction Web App
 
 
+## Project Link
+[Multi-Disease Prediction Web App](https://multi-disease-pred.onrender.com)
+
 ## Overview
 The Multi-Disease Prediction Web App is an intelligent application designed to assist users in predicting the likelihood of various diseases based on input parameters. The app uses machine learning models to provide reliable and quick predictions, aiming to support early detection and better healthcare management.
 
@@ -54,7 +57,5 @@ The Multi-Disease Prediction Web App is an intelligent application designed to a
 ### Prediction Results
 ![Prediction Results](https://github.com/RAJESH2961/multi_disease_pred/blob/main/Screenshots/diab_pred.png)
 
-## Project Link
-[Multi-Disease Prediction Web App](https://github.com/RAJESH2961/multi_disease_pred)
 
 
